@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Cuaca</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1 class="display-4">Selamat Datang</h1>
+        <p class="lead">Temukan informasi terbaru tentang cuaca di kota Anda!</p>
+    </div>
+    <div class="container">
+        <div class="weather-side">
+            <div class="weather-gradient"></div>
+            <div class="date-container">
+                <h2 class="date-dayname"></h2>
+                <span class="date-day"></span>
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="location"></span>
+            </div>
+            <div class="weather-container">
+                <span class="weather-icon"></span>
+                <h1 class="weather-temp"></h1>
+                <h3 class="weather-desc"></h3>
+            </div>
+        </div>
+        <div class="info-side">
+            <form id="weather-form-search" class="form-inline">
+                <div class="form-group mb-2">
+                    <input type="text" id="city-input" class="form-control" placeholder="Masukkan nama kota" required>
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Cari</button>
+            </form>
+            <div class="today-info">
+                <div class="humidity">
+                    <span class="title"><i class="fa-solid fa-droplet"></i> Kelembaban</span>
+                    <span class="value"></span>
+                    <div class="clear"></div>
+                </div>
+                <div class="wind">
+                    <span class="title"><i class="fa-solid fa-wind"></i> Angin</span>
+                    <span class="value"></span>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="week-container">
+                <ul class="week-list">
+                    <li>
+                        <span class="day-name"></span>
+                        <span class="day-temp"></span>
+                        <span class="day-icon"></span>
+                    </li>
+                    <li>
+                        <span class="day-name"></span>
+                        <span class="day-temp"></span>
+                        <span class="day-icon"></span>
+                    </li>
+                    <li>
+                        <span class="day-name"></span>
+                        <span class="day-temp"></span>
+                        <span class="day-icon"></span>
+                    </li>
+                    <li>
+                        <span class="day-name"></span>
+                        <span class="day-temp"></span>
+                        <span class="day-icon"></span>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+      <div class="footer-left">
+        <p class="leading-relaxed mt-2">Nama : Wahyu Nabila Octarizca Maharani</p>
+        <p class="leading-relaxed mt-2">NIM  : 215610067</p>
+      </div>
+      <div class="footer-right">
+        <form id="contact-form" action="https://formspree.io/f/mzzpdpqr" method="POST">
+          <h2 class="text-white text-lg font-medium title-font mb-2">Contact Us</h2>
+          <div class="contact-form">
+            <div class="form-row">
+              <div class="form-group mb-1">
+                <input
+                  type="text"
+                  id="full-name"
+                  name="full-name"
+                  placeholder="Nama"
+                  class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  required
+                />
+              </div>
+              <div class="form-group mb-2">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group mb-2">
+              <input
+                type="text"
+                id="feedback"
+                name="feedback"
+                placeholder="Kritik, Saran, dan Pertanyaan"
+                class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            >
+              Kirim
+            </button>
+          </div>
+        </form>
+      </div>
+    </footer>
+      
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
